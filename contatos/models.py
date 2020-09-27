@@ -36,6 +36,9 @@ class Contato(models.Model):
     categoria = models.ForeignKey(
         Categoria, on_delete=models.DO_NOTHING
     )
+    mostrar = models.BooleanField(
+        default=True
+    )
 
     def __srt__(self):
         return self.sobrenome
